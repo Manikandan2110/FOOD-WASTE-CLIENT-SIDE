@@ -1,0 +1,50 @@
+
+<html>
+    <title>graph-users-page</title>
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.tittle02{
+margin-right:450px;
+color:yellow;
+}
+.tittle03{
+margin-top:40px;
+}
+.tittle01{
+
+}
+.head{
+    text-align:center;
+}
+
+
+</style>
+<body>
+
+<div class="head">
+    <h1>USERS ENTRY GRAPH </h1></div>
+ {% for row in data %}
+
+
+<table><tr><td>
+    <span class="tittle01"><h4><br>TOTAL-USERS</h4></span></td><td>
+    <div class="tittle02" style="padding:10px;background-color:red;width:{{ row[1] }}0%;">{{ row[0] }}</div>
+</td></tr></table>
+    {% endfor %}
+
+
+</body>
+</html>

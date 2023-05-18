@@ -1,0 +1,50 @@
+
+<html>
+    <title>graph-food-page</title>
+
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+td {
+  padding: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.tittle02{
+margin-right:450px;
+color:yellow;
+}
+.tittle03{
+margin-top:40px;
+}
+.head{
+    text-align:center;
+}
+
+
+</style>
+<body>
+
+<div class="head">
+    <h1>FOOD ENTRY GRAPH </h1></div>
+ {% for row in data %}
+
+
+<table><tr><td>
+    <span class="tittle"><h4>FOOD-ENTRY</h4></span>
+    <div class="tittle03" >{{row[1]}}</div></td><td>
+    <span class="tittle01"><h4>MONTHS</h4></span>
+    <div class="tittle02" style="padding:10px;background-color:red;width:{{ row[1] }}0%;">{{ row[0] }}</div>
+</td></tr></table>
+    {% endfor %}
+
+
+</body>
+</html>

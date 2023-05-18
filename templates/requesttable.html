@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>requesttable-page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}
+</style>
+</head>
+<body>
+<table>
+   <tr>
+<th>users_id</th>
+<th>users_photo</th>
+<th>users_name</th>
+<th>users_address</th>
+<th>users_phno</th>
+<th>food_id</th>
+<th>food_name</th>
+<th>food_photo</th>
+<th>food_type1</th>
+<th>food_type2</th>
+<th>food_date</th>
+<th>food_time</th>
+
+
+
+  </tr>
+  {% for row in data %}
+   <tr>
+    <td>{{row[0]}}</td>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[4]}}</td>
+    <td>{{row[5]}}</td>
+    <td>{{row[6]}}</td>
+    <td>{{row[7]}}</td>
+    <td>{{row[8]}}</td>
+    <td>{{row[9]}}</td>
+    <td>{{row[10]}}</td>
+          <td>{{row[11]}}</td>
+   </tr>
+  {% endfor  %}
+
+</table>
+
+</body>
+</html>

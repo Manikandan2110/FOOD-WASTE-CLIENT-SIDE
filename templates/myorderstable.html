@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>myorderstable-page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  font-size: 7px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+
+
+
+     <th>users_id</th>0
+    <th>users_photo</th>1
+    <th>users_name</th>2
+    <th>users_address</th>3
+    <th>users_phno</th>4
+    <th>food_id</th>5
+    <th>food_name</th>6
+    <th>food_photo</th>7
+    <th>food_type1</th>8
+    <th>food_type2</th>9
+    <th>food_date</th>10
+    <th>food_time</th>11
+    <th>order_orderid</th>12
+    <th>order_approve</th>13
+
+  </tr>
+  {% for row in data %}
+<tr>
+    <td>{{row[0]}}</td>0
+    <td>{{row[1]}}</td>1
+    <td>{{row[2]}}</td>2
+    <td>{{row[3]}}</td>3
+    <td>{{row[4]}}</td>4
+    <td>{{row[5]}}</td>5
+    <td>{{row[6]}}</td>6
+    <td>{{row[7]}}</td>7
+    <td>{{row[8]}}</td>8
+    <td>{{row[9]}}</td>9
+    <td>{{row[10]}}</td>10
+    <td>{{row[11]}}</td>11
+    <td>{{row[12]}}</td>12
+    <td>{{row[13]}}</td>13
+
+</tr>
+  {% endfor  %}
+
+</table>
+
+</body>
+</html>
+

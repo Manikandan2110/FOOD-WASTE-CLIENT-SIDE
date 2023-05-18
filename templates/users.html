@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>users-page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.btn {
+  background-color: #f4511e;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.btn:hover {opacity: 1}
+</style>
+</head>
+<body>
+<table>
+  <tr>
+
+    <th>users_photo</th>
+    <th>users_id</th>
+    <th>users_name</th>
+    <th>users_address</th>
+    <th>users_email</th>
+    <th>users_password</th>
+    <th>users_sex</th>
+    <th>users_phno</th>
+    <th>users_state</th>
+
+  </tr>
+  {% for row in data %}
+   <tr>
+    <td>{{row[0]}}</td>
+    <td>{{row[1]}}</td>
+    <td>{{row[2]}}</td>
+    <td>{{row[3]}}</td>
+    <td>{{row[4]}}</td>
+    <td>{{row[5]}}</td>
+    <td>{{row[6]}}</td>
+    <td>{{row[7]}}</td>
+    <td>{{row[8]}}</td>
+ <td>
+      <a class="btn" href="/usersedit?RN={{ row[0] }}">edit</a></td><td>
+    <a class="btn" href="/usersdelete?RN={{ row[0] }}">delete</a></td>
+    </tr>
+  {% endfor  %}
+
+</table>
+
+</body>
+</html>

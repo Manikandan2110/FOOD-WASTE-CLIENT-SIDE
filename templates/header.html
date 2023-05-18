@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <title>header-page</title>
+
+<style>
+body{
+margin:0px;
+}
+.logo-box{
+  height:90px;
+  width:100%;
+  background-color:black;
+  color:white;
+
+}
+.logo-img{
+  height:50px;
+  width:50px;
+  border-radius:50px;
+}
+.logo-img-box{
+margin-left:180px;
+}
+.logo-user-name{
+font-size:20px;
+}
+.text-span-decoration{
+  text-decoration:none;
+  color:white;
+}
+.logo-image{
+    height:60px;
+    width:60px;
+    margin-top:9px;
+    border-radius:10px;
+}
+.notification {
+  background-color: #555;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  margin-right:20px;
+}
+
+.notification:hover {
+  background: red;
+}
+
+.notification .badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  padding: 5px 10px;
+  border-radius: 50%;
+  background-color: red;
+  color: white;
+}
+
+
+</style>
+<body>
+  <div class="logo-box">   <table><tr><td><span>&emsp;<img class="logo-image" src="/static/image/logofw.jpg" ></span>
+    </td><td>&emsp;<span> <a class="notification" href="/foodentry">FOODENTRY</a> </span></td><td>
+        </td><td>{% include("nooooo.html") %}</td><td>
+       </td><td>&emsp;<span>  <a class="notification" href="/myorders?RN={{ session['users_id'] }}"><span>MY ORDERS</span><span class="badge">{{ total }}</span></a></span></td><td>
+     </td><td>&emsp;<span><a class="notification" href="/request?RN={{ session['users_id'] }}"><span>REQUEST</span><span class="badge">{{ total1 }}</span></a></span></td><td>
+
+    </td><td>&emsp;<span> <a class="notification" href="/currentresponse?RN={{ session['users_id'] }}"><span>RESPONSE</span><span class="badge">{{ total2 }}</span></a> </span></td><td>
+
+  <span class="logo-img-box"><img class="logo-img"  src="static/upload/{{ session['users_photo'] }}"></span>
+  </td><td>&emsp;<span class="logo-user-name">{{ session["users_name"] }}</span></td>
+</tr></table>
+
+  </div>
+
+{% include("foodtype.html") %}
+
+  <br>
+</body>
+</html>

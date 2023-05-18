@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>usersentry-page</title>
+</head>
+<style>
+
+* {box-sizing: border-box}
+
+/* Add padding to container elements */
+.container {
+    padding: 20px;
+      width:700px;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+      border:1px solid #ccc;
+      border-radius:10px;
+      background:white;
+  -webkit-box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  -moz-box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  }
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+  font-family: Montserrat,Arial, Helvetica, sans-serif;
+}
+select {
+  width: 18%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+	font-family: Montserrat,Arial, Helvetica, sans-serif;
+}
+
+input[type=phone] {
+  width: 81%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=phone]:focus, select:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #0eb7f4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+	font-size:16px;
+	font-family: Montserrat,Arial, Helvetica, sans-serif;
+	border-radius:10px;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+/* Change styles for signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .signupbtn {
+     width: 100%;
+  }
+}
+
+</style>
+<body>
+<form action="/usersSave" method="post" enctype="multipart/form-data">
+
+        <div class="container">
+          <h1>USER ENTRY</h1>
+            <table>
+                <tr>
+            <td><label><b>UPLOAD PHOTO</b></label>
+                <input type="file" name="file" placeholder="PHOTO" required="">
+            </td>
+            <td>
+                 <label><b>USER ID</b></label>
+                 <input type="text" name="users_id" placeholder="ID" required="">
+            </td>
+                </tr>
+                <tr>
+            <td>
+                 <label><b>USER NAME</b></label>
+                 <input type="text" name="users_name" placeholder="NAME" required="">
+            </td>
+            <td>
+                <label><b>ADDRESS</b></label>
+                <input type="text" name="users_address" placeholder="ADDRESS" required="">
+            </td>
+                </tr>
+                <tr>
+             <td>
+                  <label><b>EMAIL</b></label>
+                <input type="text" name="users_email" placeholder="EMAIL" required="">
+             </td>
+              <td>
+                  <label><b>PASSWORD</b></label>
+                 <input type="text" name="users_password" placeholder="PASSWORD" required="">
+              </td>
+                </tr>
+                <tr>
+             <td>
+                 <label><b>GENDER</b></label>
+                <input type="text" name="users_sex" placeholder="Gender" required="">
+             </td>
+             <td>
+                 <label><b>PHONE NO</b></label>
+                  <input type="text" name="users_phno" placeholder="PHONENO" required="">
+             </td>
+                </tr>
+                <tr>
+              <td>
+                    <label><b>STATE</b></label>
+                  <input type="text" name="users_state" placeholder="STATE" required="">
+            </td>
+
+</tr></table>
+          <div class="clearfix">
+            <button type="submit" class="btn">SAVE</button>
+          </div>
+        </div>
+      </form>
+</div>
+</body>
+</html>

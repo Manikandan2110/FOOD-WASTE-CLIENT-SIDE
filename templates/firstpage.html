@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Home Page</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  background-color:white;
+  height:40px;
+  width:100%;
+  font-size:23px;
+  padding:0px 15px;
+  padding:25px;
+  color:black;
+  }
+
+.topnav a {
+  float: left;
+  color:black;
+  text-align:center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:grey;
+  color: black;
+}
+.topnav a.active{
+background-color:dodgerblue;
+color:white;
+}
+.topnav a.active1{
+margin-left:20px;
+color:white;
+background-color:dodgerblue;
+}
+.logofirst{
+text-align:left;
+
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="/usersentry">SIGNUP</a>
+  <a class="active1" href="/signup">LOGIN</a>
+</div>{% include("foodtype.html") %}
+</body>
+</html>

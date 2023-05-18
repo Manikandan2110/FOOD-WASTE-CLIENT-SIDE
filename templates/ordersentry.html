@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ordersentry</title>
+</head>
+<style>
+
+* {box-sizing: border-box}
+
+/* Add padding to container elements */
+.container {
+margin-top:120px;
+    padding: 20px;
+    width:400px;
+    position: absolute;
+    margin-top:60;
+    left: 50%;
+    top: 40%;
+    text-align:center;
+    transform: translate(-50%, -50%);
+      border:1px solid #ccc;
+      border-radius:10px;
+      background:white;
+  -webkit-box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  -moz-box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  box-shadow: 2px 1px 21px -9px rgba(0,0,0,0.38);
+  }
+
+/* Full-width input fields */
+input[type=text], input[type=text] {
+  width: 300px;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f7f7f7;
+  font-family: Montserrat,Arial, Helvetica, sans-serif;
+}
+}
+
+input[type=text]:focus, input[type=text]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+/* Set a style for all buttons */
+button {
+  background-color: #0eb7f4;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+	font-size:16px;
+	font-family: Montserrat,Arial, Helvetica, sans-serif;
+	border-radius:10px;
+}
+
+button:hover {
+  opacity:1;
+}
+
+
+/* Change styles for signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .signupbtn {
+     width: 100%;
+  }
+}
+
+</style>
+<body>
+  {% include("nextbutton.html") %}
+	<form action="/ordersSave" method="post">
+
+        <div class="container">
+          <h1>FOOD ORDER</h1>
+                  <label><b>FOOD-USER-ID</b></label><br>
+                <input type="text" name="order_userid" placeholder="FOOD-USER-ID" required=""><br><br>
+                  <label><b>FOOD-ID</b></label><br>
+                 <input type="text" name="order_foodid" placeholder="FOOD-ID" required=""><br><br>
+                  <label><b>USER-ID</b></label><br>
+                 <input type="text" name="order_buyerid" placeholder="USER-ID" required=""><br><br>
+          <div class="clearfix">
+            <button type="submit" class="btn">ORDER</button>
+          </div>
+        </div>
+      </form>
+</div>
+</body>
+</html>

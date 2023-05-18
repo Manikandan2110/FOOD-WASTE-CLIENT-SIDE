@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>myorders-page</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.bodynonveg {
+  font-family: Arial, Helvetica, sans-serif;
+      background-color: #8cb3d9;
+}
+
+.flip-card {
+  background-color: transparent;
+  width:300px;
+  height:420px;
+  perspective: 1000px;
+  margin:20px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+.row1{
+  color:red;
+  font-weight:600;
+}
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+ background-image: url("/static/image/ms.jpg");
+ color: black;
+}
+.back1 {
+  color:#9900cc;
+float:center;
+  font-weight:600;
+
+
+
+
+}
+.back3 {
+  color:#9900cc;
+  font-weight:600;
+float:center;
+
+
+}
+
+.flip-card-back {
+ background-image: url("/static/image/mssss.jpg");
+  color:#003366;
+  font-weight:600;
+  transform: rotateY(180deg);
+}
+.logo1{
+  width:30px;
+  height:30px;
+  border-radius:30px;
+  border:1px solid white;
+  opacity:0.9;
+  float:left;
+  margin-left:20px;
+    margin-top:30px;
+}
+.back02
+{
+  width:250px;
+  height:80px;
+margin-left:30px;
+  color:#9900cc;
+  float:center;
+  font-weight:600;
+}
+.logo2{
+  width:170px;
+  height:130px;
+  border-radius:5px;
+  border:1px solid white;
+  opacity:0.9;
+
+}
+.s2{
+  margin-right:220px;
+    color:black;
+  font-weight:600;
+
+
+}
+.s1{
+margin-right:70px;
+    color:black;
+  font-weight:600;
+
+}
+.s3{
+    color:black;
+  font-weight:600;
+
+}
+.s4{
+  font-weight:600;
+  color:#003366;
+}
+.s5{
+  font-weight:600;
+  color:#003366;
+}
+.boi1{
+    display:flex;
+    flex-wrap:wrap;
+    margin-top:20px;
+    margin-left:74px;
+    padding:10px;
+
+ }
+-decoration:none;
+    padding:10px;
+background: rgb(63,94,251);
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.9416141456582633) 100%);
+color:white;
+
+ }
+
+
+
+
+    .bodysytle {
+	margin: 0;
+	height: 100px;
+	display: grid;
+    height:100px;
+text-align:center;
+
+}
+
+.a {
+	position: relative;
+	padding: 30px 60px;
+	box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+	color: #999;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	font: 700 30px consolas;
+	overflow: hidden;
+}
+
+.a span:nth-child(1) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to right, #171618, #3bff3b);
+	animation: animate1 15s linear infinite;
+}
+
+@keyframes animate1 {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(100%);
+	}
+}
+
+.a span:nth-child(2) {
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to bottom, #171618, #3bff3b);
+	animation: animate2 15s linear infinite;
+	animation-delay: 1s;
+}
+@keyframes animate2 {
+	0% {
+		transform: translateY(-100%);
+	}
+	100% {
+		transform: translateY(100%);
+	}
+}
+
+.a span:nth-child(3) {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 3px;
+	background: linear-gradient(to left, #171618, #3bff3b);
+	animation: animate3 15s linear infinite;
+}
+
+@keyframes animate3 {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.a span:nth-child(4) {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 3px;
+	background: linear-gradient(to top, #171618, #3bff3b);
+	animation: animate4 15s linear infinite;
+	animation-delay: 1s;
+}
+
+@keyframes animate4 {
+	0% {
+		transform: translateY(100%);
+	}
+ 		transform: translateY(-100%);
+	}
+}
+
+</style>
+</head>
+<body>{% include("stylemyorder.html") %}
+  {% include("nextbutton.html") %}
+<div class="bodynonveg"><div class="boi1">{% for row in data %}
+<div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front"><br>
+      <span class="s1">{{row[8]}}</span>
+        <img class="logo1"  src="/static/upload/{{ row[1] }}"><br> <span class="s2">&emsp;{{row[0]}}</span><br><br><br>
+        <center>
+          <img class="logo2" src="/static/upload/{{ row[7] }}"><br>
+            <span class="s3">{{row[6]}}</span><br><br>    <span class="s4">TIME ENDS:</span><span class="row1">{{row[11]}}</span>
+            <br><br> <span class="s4">DATE :</span><span class="row1">{{row[10]}}</span>
+        </center>
+    </div>
+    <div class="flip-card-back"><hr><br>
+        USER NAME:<br><span class="back1">{{row[2]}}</span><br><br><hr><br>
+        USER ADDRESS:<br><div class="back02">{{row[3]}}</div><br><hr><br>
+        USER PHONE NO:<br><span class="back3">{{row[4]}}</span><br><br><hr><br>
+     <span class="back3">ORDER :{{row[13]}}</span>
+
+    </div>
+  </div>
+</div>{% endfor  %}
+   </div>
+</div>
+</body>
+</html>
